@@ -7,6 +7,30 @@
 	},
 	"item": [
 		{
+			"name": "Get data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"id": "0290ea49-5880-4255-b52b-0e0a5ef8146e",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "",
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
 			"name": "Post data",
 			"event": [
 				{
@@ -37,125 +61,6 @@
 				},
 				"url": "",
 				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
-			},
-			"response": [
-				{
-					"id": "08def37b-c5bb-412e-9616-3a77c3e526ca",
-					"name": "Post data",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"name\": \"SVP Akash\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "https://api.restful-api.dev/objects"
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": null,
-					"header": [
-						{
-							"key": ":status",
-							"value": 200
-						},
-						{
-							"key": "date",
-							"value": "Mon, 04 May 2026 12:40:46 GMT"
-						},
-						{
-							"key": "content-type",
-							"value": "application/json;charset=UTF-8"
-						},
-						{
-							"key": "server",
-							"value": "cloudflare"
-						},
-						{
-							"key": "nel",
-							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
-						},
-						{
-							"key": "vary",
-							"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers"
-						},
-						{
-							"key": "x-content-type-options",
-							"value": "nosniff"
-						},
-						{
-							"key": "x-xss-protection",
-							"value": "1; mode=block"
-						},
-						{
-							"key": "cache-control",
-							"value": "no-cache, no-store, max-age=0, must-revalidate"
-						},
-						{
-							"key": "pragma",
-							"value": "no-cache"
-						},
-						{
-							"key": "expires",
-							"value": "0"
-						},
-						{
-							"key": "x-frame-options",
-							"value": "DENY"
-						},
-						{
-							"key": "cf-cache-status",
-							"value": "DYNAMIC"
-						},
-						{
-							"key": "report-to",
-							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=zOp6kaFi9drAsWVDREuDHW3V4JyPxeyiYrjNk3DCqinQe4%2FpVAAjcRTThHBMRBKw%2BGBEinvIWB1XfTGX56DRu4If55pZyPioxQ3W2%2BjQeA9uLvpiWjD8iiPflO6BCtzZFJWGK9JTJli3BOd%2FlEQuyRWU\"}]}"
-						},
-						{
-							"key": "content-encoding",
-							"value": "br"
-						},
-						{
-							"key": "cf-ray",
-							"value": "9f67936b5f58cdf5-SIN"
-						},
-						{
-							"key": "alt-svc",
-							"value": "h3=\":443\"; ma=86400"
-						}
-					],
-					"cookie": [],
-					"responseTime": null,
-					"body": "{\n    \"id\": \"ff8081819d82fab6019df3015f397ed7\",\n    \"name\": \"SVP Akash\",\n    \"createdAt\": 1777898446649,\n    \"data\": null\n}"
-				}
-			]
-		},
-		{
-			"name": "Get data",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});"
-						]
-					}
-				}
-			],
-			"id": "0290ea49-5880-4255-b52b-0e0a5ef8146e",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "",
-				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
 			},
 			"response": []
 		}
